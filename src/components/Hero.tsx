@@ -1,6 +1,6 @@
 import { Download, Github, Linkedin, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import profilePhoto from '@/assets/IMG-e6207925ce66c978c009ffb5391966a3-V.jpg';
+import profilePhoto from '@/assets/profile-photo.jpg';
 
 const Hero = () => {
   const downloadCV = () => {
