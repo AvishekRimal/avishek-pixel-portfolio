@@ -25,12 +25,12 @@ const Footer = () => {
     },
     { 
       icon: Linkedin, 
-      href: 'https://linkedin.com/in/avishekrimal',
+      href: 'https://www.linkedin.com/in/avishek-rimal-67a63a22b/',
       label: 'LinkedIn'
     },
     { 
       icon: Mail, 
-      href: 'mailto:avishek.rimal@email.com',
+      href: 'mailto:avishek.rimal2002@gmail.com',
       label: 'Email'
     },
   ];
@@ -107,13 +107,13 @@ const Footer = () => {
                 href="mailto:avishek.rimal@email.com"
                 className="block hover:text-primary transition-colors duration-300"
               >
-                avishek.rimal@email.com
+                avishek.rimal2002@email.com
               </a>
               <a 
                 href="tel:+9779841234567"
                 className="block hover:text-primary transition-colors duration-300"
               >
-                +977 9841234567
+                +977 9841177198
               </a>
             </div>
           </div>
@@ -128,11 +128,11 @@ const Footer = () => {
             © {currentYear} Avishek Rimal. All rights reserved.
           </div>
           
-          <div className="flex items-center text-muted-foreground text-sm">
+          {/* <div className="flex items-center text-muted-foreground text-sm">
             <span>Made with</span>
             <Heart className="w-4 h-4 mx-2 text-red-500 fill-current" />
             <span>using React & Tailwind CSS</span>
-          </div>
+          </div> */}
 
           <div className="text-muted-foreground text-sm">
             <a 

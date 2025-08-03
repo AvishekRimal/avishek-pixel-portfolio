@@ -13,7 +13,6 @@ const Skills = () => {
         { name: 'TypeScript', level: 'Advanced' },
         { name: 'React', level: 'Expert' },
         { name: 'Next.js', level: 'Advanced' },
-        { name: 'Vue.js', level: 'Intermediate' },
         { name: 'Tailwind CSS', level: 'Expert' },
         { name: 'SASS/SCSS', level: 'Advanced' },
         { name: 'Bootstrap', level: 'Advanced' }
@@ -26,13 +25,12 @@ const Skills = () => {
         { name: 'Git', level: 'Expert' },
         { name: 'GitHub', level: 'Expert' },
         { name: 'Vercel', level: 'Advanced' },
-        { name: 'Netlify', level: 'Advanced' },
         { name: 'Figma', level: 'Advanced' },
         { name: 'VS Code', level: 'Expert' },
-        { name: 'Webpack', level: 'Intermediate' },
+        { name: 'Postman', level: 'Intermediate' },
+        { name: 'Jira', level: 'Intermediate' },
         { name: 'Vite', level: 'Advanced' },
         { name: 'npm/yarn', level: 'Expert' },
-        { name: 'Docker', level: 'Intermediate' }
       ]
     },
     {
@@ -42,8 +40,7 @@ const Skills = () => {
         { name: 'Responsive Design', level: 'Expert' },
         { name: 'Performance Optimization', level: 'Advanced' },
         { name: 'SEO', level: 'Intermediate' },
-        { name: 'Accessibility (a11y)', level: 'Advanced' },
-        { name: 'PWA Development', level: 'Intermediate' },
+      
         { name: 'API Integration', level: 'Advanced' },
         { name: 'Testing (Jest)', level: 'Intermediate' },
         { name: 'Agile/Scrum', level: 'Advanced' },

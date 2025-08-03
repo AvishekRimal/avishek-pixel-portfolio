@@ -15,26 +15,26 @@ const Projects = () => {
       features: ['Real-time Analytics', 'Inventory Management', 'User Management'],
       category: 'Full Stack'
     },
-    {
-      title: 'Weather App Pro',
-      description: 'A modern weather application with location-based forecasts, interactive maps, and personalized weather alerts.',
-      image: '/placeholder.svg',
-      liveUrl: 'https://weather-app-pro-demo.vercel.app',
-      githubUrl: 'https://github.com/avishekrimal/weather-app-pro',
-      techStack: ['Next.js', 'TypeScript', 'OpenWeather API', 'Mapbox', 'Framer Motion'],
-      features: ['Location-based Forecasts', 'Interactive Maps', 'Weather Alerts'],
-      category: 'Frontend'
-    },
-    {
-      title: 'Task Management System',
-      description: 'A collaborative task management platform with drag-and-drop functionality, team collaboration, and progress tracking.',
-      image: '/placeholder.svg',
-      liveUrl: 'https://task-manager-demo.vercel.app',
-      githubUrl: 'https://github.com/avishekrimal/task-management',
-      techStack: ['React', 'Redux Toolkit', 'DnD Kit', 'Firebase', 'Material-UI'],
-      features: ['Drag & Drop', 'Team Collaboration', 'Progress Tracking'],
-      category: 'Full Stack'
-    },
+    // {
+    //   title: 'Weather App Pro',
+    //   description: 'A modern weather application with location-based forecasts, interactive maps, and personalized weather alerts.',
+    //   image: '/placeholder.svg',
+    //   liveUrl: 'https://weather-app-pro-demo.vercel.app',
+    //   githubUrl: 'https://github.com/avishekrimal/weather-app-pro',
+    //   techStack: ['Next.js', 'TypeScript', 'OpenWeather API', 'Mapbox', 'Framer Motion'],
+    //   features: ['Location-based Forecasts', 'Interactive Maps', 'Weather Alerts'],
+    //   category: 'Frontend'
+    // },
+    // {
+    //   title: 'Task Management System',
+    //   description: 'A collaborative task management platform with drag-and-drop functionality, team collaboration, and progress tracking.',
+    //   image: '/placeholder.svg',
+    //   liveUrl: 'https://task-manager-demo.vercel.app',
+    //   githubUrl: 'https://github.com/avishekrimal/task-management',
+    //   techStack: ['React', 'Redux Toolkit', 'DnD Kit', 'Firebase', 'Material-UI'],
+    //   features: ['Drag & Drop', 'Team Collaboration', 'Progress Tracking'],
+    //   category: 'Full Stack'
+    // },
     {
       title: 'Portfolio Website Builder',
       description: 'A no-code solution for creating beautiful portfolio websites with customizable templates and themes.',
@@ -55,16 +55,16 @@ const Projects = () => {
       features: ['Video Streaming', 'Progress Tracking', 'Interactive Quizzes'],
       category: 'Full Stack'
     },
-    {
-      title: 'Cryptocurrency Tracker',
-      description: 'A real-time cryptocurrency tracking application with portfolio management and price alerts.',
-      image: '/placeholder.svg',
-      liveUrl: 'https://crypto-tracker-demo.vercel.app',
-      githubUrl: 'https://github.com/avishekrimal/crypto-tracker',
-      techStack: ['React', 'TypeScript', 'CoinGecko API', 'Chart.js', 'LocalStorage'],
-      features: ['Real-time Prices', 'Portfolio Tracking', 'Price Alerts'],
-      category: 'Frontend'
-    }
+    // {
+    //   title: 'Cryptocurrency Tracker',
+    //   description: 'A real-time cryptocurrency tracking application with portfolio management and price alerts.',
+    //   image: '/placeholder.svg',
+    //   liveUrl: 'https://crypto-tracker-demo.vercel.app',
+    //   githubUrl: 'https://github.com/avishekrimal/crypto-tracker',
+    //   techStack: ['React', 'TypeScript', 'CoinGecko API', 'Chart.js', 'LocalStorage'],
+    //   features: ['Real-time Prices', 'Portfolio Tracking', 'Price Alerts'],
+    //   category: 'Frontend'
+    // }
   ];
 
   const categoryIcons = {

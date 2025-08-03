@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -40,14 +40,14 @@ const Contact = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'avishek.rimal@email.com',
-      href: 'mailto:avishek.rimal@email.com'
+      value: 'avishek.rimal2002@gmail.com',
+      href: 'mailto:avishek.rimal2002@gmail.com'
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+977 9841234567',
-      href: 'tel:+9779841234567'
+      value: '+977 9841177198',
+      href: 'tel:+9779841177198'
     },
     {
       icon: MapPin,
@@ -66,12 +66,12 @@ const Contact = () => {
     {
       icon: Linkedin,
       label: 'LinkedIn',
-      href: 'https://linkedin.com/in/avishekrimal'
+      href: 'https://www.linkedin.com/in/avishek-rimal-67a63a22b/'
     },
     {
-      icon: Twitter,
-      label: 'Twitter',
-      href: 'https://twitter.com/avishekrimal'
+      icon: Instagram,
+      label: 'Instagram',
+      href: 'https://www.instagram.com/rimalavishek/'
     }
   ];
 
@@ -256,18 +256,18 @@ const Contact = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
                   variant="outline"
-                  onClick={() => window.open('tel:+9779841234567', '_self')}
+                  onClick={() => window.open('tel:+9779841177198', '_self')}
                 >
                   <Phone className="w-4 h-4 mr-2" />
                   Call Now
                 </Button>
-                <Button 
+                {/* <Button 
                   className="btn-hero"
                   onClick={() => window.open('mailto:avishek.rimal@email.com?subject=Meeting Request', '_self')}
                 >
                   <Mail className="w-4 h-4 mr-2" />
                   Schedule Meeting
-                </Button>
+                </Button> */}
               </div>
             </CardContent>
           </Card>

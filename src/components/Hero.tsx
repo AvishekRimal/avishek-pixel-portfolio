@@ -1,6 +1,6 @@
 import { Download, Github, Linkedin, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import profilePhoto from '@/assets/profile-photo.jpg';
+import profilePhoto from '@/assets/IMG-e6207925ce66c978c009ffb5391966a3-V.jpg';
 
 const Hero = () => {
   const downloadCV = () => {
@@ -59,7 +59,7 @@ const Hero = () => {
                 <Github className="h-6 w-6" />
               </a>
               <a 
-                href="https://linkedin.com/in/avishekrimal" 
+                href="https://www.linkedin.com/in/avishek-rimal-67a63a22b/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:scale-110 transform"
@@ -67,7 +67,7 @@ const Hero = () => {
                 <Linkedin className="h-6 w-6" />
               </a>
               <a 
-                href="mailto:avishek.rimal@email.com"
+                href="mailto:avishek.rimal2002@gmail.com"
                 className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:scale-110 transform"
               >
                 <Mail className="h-6 w-6" />
