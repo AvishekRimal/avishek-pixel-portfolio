@@ -5,7 +5,7 @@ import { Badge } from '@/components/ui/badge';
 const Education = () => {
   const education = [
     {
-      degree: 'Bachelor of Business Studies (BBS)',
+      degree: ' Bachelor of Information Technology Management (BITM)',
       institution: 'Nepal Commerce Campus',
       location: 'Minbhawan, Kathmandu, Nepal',
       years: '2021 - Present',
