@@ -5,57 +5,84 @@ import { Badge } from '@/components/ui/badge';
 const Education = () => {
   const education = [
     {
-      degree: 'Bachelor of Computer Science',
-      institution: 'Tribhuvan University',
-      location: 'Kathmandu, Nepal',
-      years: '2019 - 2023',
-      gpa: '3.8/4.0',
-      description: 'Comprehensive study of computer science fundamentals including algorithms, data structures, software engineering, and web development.',
+      degree: 'Bachelor of Business Studies (BBS)',
+      institution: 'Nepal Commerce Campus',
+      location: 'Minbhawan, Kathmandu, Nepal',
+      years: '2021 - Present',
+      status: '7th Semester Running',
+      description: 'Pursuing a comprehensive degree with a focus on business and management principles, while integrating my passion for technology and its application in the commercial sector.',
       achievements: [
-        'Dean\'s List for Academic Excellence',
-        'Best Final Year Project Award',
-        'Programming Contest Winner',
-        'Tech Club President'
+        'Consistently maintaining a strong academic record.',
+        'Actively participating in college tech workshops and seminars.',
+        'Developing a web-based final year project focused on business solutions.'
       ],
       relevantCourses: [
-        'Web Development',
-        'Database Systems',
-        'Software Engineering',
-        'Data Structures & Algorithms',
-        'Human-Computer Interaction',
-        'Mobile App Development'
+        'Management Information Systems',
+        'Database Management',
+        'E-commerce',
+        'Business Communication',
+        'Financial Accounting',
+        'Organizational Behavior'
+      ]
+    },
+    {
+      degree: '+2 (Higher Secondary Education)',
+      institution: 'Bhanubhakta Memorial College',
+      location: 'Kathmandu, Nepal',
+      years: '2019 - 2021',
+      gpa: '3.68/4.0',
+      description: 'Completed higher secondary education with a focus on management, providing a strong foundation in economics, accounting, and business studies.',
+      achievements: [
+        'Awarded for High Academic Achievement.',
+        'Active member of the Student Council.'
+      ],
+      relevantCourses: [
+        'Business Studies',
+        'Economics',
+        'Accountancy',
+        'Computer Science'
+      ]
+    },
+    {
+      degree: 'Secondary Education Examination (SEE)',
+      institution: 'Karma Sangha Academy',
+      location: 'Nuwakot, Nepal',
+      years: '2018',
+      gpa: '3.25/4.0',
+      description: 'Successfully completed secondary education, building a strong disciplinary and academic base.',
+      achievements: [
+        'Secured Distinction in final examinations.',
+        'Participated in inter-school science exhibitions.'
+      ],
+      relevantCourses: [
+        'Computer Science',
+        'Optional Mathematics',
+        'Science'
       ]
     }
   ];
 
   const certifications = [
     {
-      name: 'React - The Complete Guide',
-      issuer: 'Udemy',
+      name: 'MERN Stack Development',
+      issuer: 'Broadway Infosys Nepal',
+      year: '2024',
+      credentialId: 'BI-MERN-12345',
+      skills: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'REST API', 'JWT']
+    },
+    {
+      name: 'Web Design & Development',
+      issuer: 'Broadway Infosys Nepal',
       year: '2023',
-      credentialId: 'UC-12345678',
-      skills: ['React', 'Redux', 'TypeScript', 'Next.js']
+      credentialId: 'BI-WD-67890',
+      skills: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap', 'PHP/MySQL', 'jQuery']
     },
     {
-      name: 'Advanced CSS and Sass',
-      issuer: 'Udemy',
-      year: '2023',
-      credentialId: 'UC-87654321',
-      skills: ['CSS3', 'Sass', 'Flexbox', 'Grid', 'Animations']
-    },
-    {
-      name: 'JavaScript Algorithms and Data Structures',
-      issuer: 'freeCodeCamp',
+      name: 'C and C++ Programming',
+      issuer: 'Broadway Infosys Nepal',
       year: '2022',
-      credentialId: 'FCC-98765432',
-      skills: ['JavaScript', 'ES6+', 'Algorithms', 'Data Structures']
-    },
-    {
-      name: 'Responsive Web Design',
-      issuer: 'freeCodeCamp',
-      year: '2022',
-      credentialId: 'FCC-13579246',
-      skills: ['HTML5', 'CSS3', 'Responsive Design', 'Accessibility']
+      credentialId: 'BI-C-54321',
+      skills: ['C', 'C++', 'OOP', 'Pointers', 'Data Structures', 'Problem Solving']
     }
   ];
 
@@ -91,9 +118,15 @@ const Education = () => {
                     <h4 className="text-xl font-semibold text-primary mb-2 md:mb-0">
                       {edu.degree}
                     </h4>
-                    <Badge variant="secondary" className="self-start">
-                      GPA: {edu.gpa}
-                    </Badge>
+                    {edu.gpa ? (
+                      <Badge variant="secondary" className="self-start">
+                        GPA: {edu.gpa}
+                      </Badge>
+                    ) : (
+                      <Badge variant="secondary" className="self-start bg-primary/20 text-primary">
+                        {edu.status}
+                      </Badge>
+                    )}
                   </div>
                   <div className="space-y-2">
                     <p className="text-lg font-medium">{edu.institution}</p>

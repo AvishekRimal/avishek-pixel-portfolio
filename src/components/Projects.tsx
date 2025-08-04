@@ -6,14 +6,14 @@ import { Badge } from '@/components/ui/badge';
 const Projects = () => {
   const projects = [
     {
-      title: 'E-Commerce Dashboard',
-      description: 'A comprehensive admin dashboard for managing e-commerce operations with real-time analytics, inventory management, and customer insights.',
+      title: 'Enterprise Resource Planning (ERP)',
+      description: 'A comprehensive ERP system for managing business processes, including finance, HR, and supply chain.',
       image: '/placeholder.svg',
-      liveUrl: 'https://ecommerce-dashboard-demo.vercel.app',
-      githubUrl: 'https://github.com/avishekrimal/ecommerce-dashboard',
+      // liveUrl: 'https://ecommerce-dashboard-demo.vercel.app',
+      // githubUrl: 'https://github.com/avishekrimal/ecommerce-dashboard',
       techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Chart.js', 'REST API'],
-      features: ['Real-time Analytics', 'Inventory Management', 'User Management'],
-      category: 'Full Stack'
+      features: [ 'Dashboard Analytics', 'User Management', 'Inventory Tracking'],
+      category: 'Frontend'
     },
     // {
     //   title: 'Weather App Pro',
@@ -41,19 +41,19 @@ const Projects = () => {
       image: '/placeholder.svg',
       liveUrl: 'https://portfolio-builder-demo.vercel.app',
       githubUrl: 'https://github.com/avishekrimal/portfolio-builder',
-      techStack: ['Vue.js', 'Nuxt.js', 'Tailwind CSS', 'Supabase', 'Stripe'],
+      techStack: [ 'Next.js', 'Tailwind CSS', ],
       features: ['Drag & Drop Builder', 'Custom Templates', 'Export Options'],
       category: 'Frontend'
     },
     {
-      title: 'Learning Management System',
-      description: 'An educational platform for online courses with video streaming, progress tracking, and interactive quizzes.',
+      title: 'Inventory Management System',
+      description: 'A robust inventory management application for tracking stock levels, orders, and suppliers with real-time updates.',
       image: '/placeholder.svg',
-      liveUrl: 'https://lms-demo.vercel.app',
-      githubUrl: 'https://github.com/avishekrimal/learning-management',
-      techStack: ['React', 'Node.js', 'MongoDB', 'Socket.io', 'AWS S3'],
-      features: ['Video Streaming', 'Progress Tracking', 'Interactive Quizzes'],
-      category: 'Full Stack'
+      // liveUrl: 'https://lms-demo.vercel.app',
+      // githubUrl: 'https://github.com/avishekrimal/learning-management',
+      techStack: ['React', 'TypeScript', 'Redux Toolkit', 'Firebase', 'Material-UI'],
+      features: ['Real-time Stock Updates', 'Order Management', 'Supplier Tracking'],
+      category: 'Frontend'
     },
     // {
     //   title: 'Cryptocurrency Tracker',
@@ -166,21 +166,21 @@ const Projects = () => {
 
                 <CardFooter className="p-6 pt-0">
                   <div className="flex space-x-3 w-full">
-                    <Button 
+                    {/* <Button 
                       className="flex-1 btn-hero"
                       onClick={() => window.open(project.liveUrl, '_blank')}
                     >
                       <ExternalLink className="w-4 h-4 mr-2" />
                       Live Demo
-                    </Button>
-                    <Button 
+                    </Button> */}
+                    {/* <Button 
                       variant="outline"
                       className="flex-1"
                       onClick={() => window.open(project.githubUrl, '_blank')}
                     >
                       <Github className="w-4 h-4 mr-2" />
                       GitHub
-                    </Button>
+                    </Button> */}
                   </div>
                 </CardFooter>
               </Card>
