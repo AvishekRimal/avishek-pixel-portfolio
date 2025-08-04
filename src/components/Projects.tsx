@@ -8,39 +8,19 @@ const Projects = () => {
     {
       title: 'Enterprise Resource Planning (ERP)',
       description: 'A comprehensive ERP system for managing business processes, including finance, HR, and supply chain.',
-      image: '/placeholder.svg',
+      image: '/erp.webp', // Assuming 'erp.webp' is in your /public folder
       // liveUrl: 'https://ecommerce-dashboard-demo.vercel.app',
       // githubUrl: 'https://github.com/avishekrimal/ecommerce-dashboard',
       techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Chart.js', 'REST API'],
       features: [ 'Dashboard Analytics', 'User Management', 'Inventory Tracking'],
       category: 'Frontend'
     },
-    // {
-    //   title: 'Weather App Pro',
-    //   description: 'A modern weather application with location-based forecasts, interactive maps, and personalized weather alerts.',
-    //   image: '/placeholder.svg',
-    //   liveUrl: 'https://weather-app-pro-demo.vercel.app',
-    //   githubUrl: 'https://github.com/avishekrimal/weather-app-pro',
-    //   techStack: ['Next.js', 'TypeScript', 'OpenWeather API', 'Mapbox', 'Framer Motion'],
-    //   features: ['Location-based Forecasts', 'Interactive Maps', 'Weather Alerts'],
-    //   category: 'Frontend'
-    // },
-    // {
-    //   title: 'Task Management System',
-    //   description: 'A collaborative task management platform with drag-and-drop functionality, team collaboration, and progress tracking.',
-    //   image: '/placeholder.svg',
-    //   liveUrl: 'https://task-manager-demo.vercel.app',
-    //   githubUrl: 'https://github.com/avishekrimal/task-management',
-    //   techStack: ['React', 'Redux Toolkit', 'DnD Kit', 'Firebase', 'Material-UI'],
-    //   features: ['Drag & Drop', 'Team Collaboration', 'Progress Tracking'],
-    //   category: 'Full Stack'
-    // },
     {
       title: 'Portfolio Website Builder',
       description: 'A no-code solution for creating beautiful portfolio websites with customizable templates and themes.',
-      image: '/placeholder.svg',
-      liveUrl: 'https://portfolio-builder-demo.vercel.app',
-      githubUrl: 'https://github.com/avishekrimal/portfolio-builder',
+      image: '/image.png', // Assuming 'image.png' is in your /public folder
+      // liveUrl: 'https://portfolio-builder-demo.vercel.app',
+      // githubUrl: 'https://github.com/avishekrimal/portfolio-builder',
       techStack: [ 'Next.js', 'Tailwind CSS', ],
       features: ['Drag & Drop Builder', 'Custom Templates', 'Export Options'],
       category: 'Frontend'
@@ -48,23 +28,13 @@ const Projects = () => {
     {
       title: 'Inventory Management System',
       description: 'A robust inventory management application for tracking stock levels, orders, and suppliers with real-time updates.',
-      image: '/placeholder.svg',
+      image: '/inv.jpg', // Assuming 'inv.jpg' is in your /public folder
       // liveUrl: 'https://lms-demo.vercel.app',
       // githubUrl: 'https://github.com/avishekrimal/learning-management',
       techStack: ['React', 'TypeScript', 'Redux Toolkit', 'Firebase', 'Material-UI'],
       features: ['Real-time Stock Updates', 'Order Management', 'Supplier Tracking'],
       category: 'Frontend'
     },
-    // {
-    //   title: 'Cryptocurrency Tracker',
-    //   description: 'A real-time cryptocurrency tracking application with portfolio management and price alerts.',
-    //   image: '/placeholder.svg',
-    //   liveUrl: 'https://crypto-tracker-demo.vercel.app',
-    //   githubUrl: 'https://github.com/avishekrimal/crypto-tracker',
-    //   techStack: ['React', 'TypeScript', 'CoinGecko API', 'Chart.js', 'LocalStorage'],
-    //   features: ['Real-time Prices', 'Portfolio Tracking', 'Price Alerts'],
-    //   category: 'Frontend'
-    // }
   ];
 
   const categoryIcons = {
@@ -98,31 +68,24 @@ const Projects = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardHeader className="p-0">
-                  <div className="relative overflow-hidden rounded-t-lg bg-gradient-to-br from-primary/10 to-primary-glow/10 h-48 flex items-center justify-center">
-                    <div className="text-6xl opacity-20">
-                      <IconComponent className="w-16 h-16" />
-                    </div>
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                  {/* --- MODIFIED SECTION FOR STANDARD REACT --- */}
+                  <div className="relative overflow-hidden rounded-t-lg h-48">
+                    {/* Use a standard <img> tag */}
+                    <img 
+                      src={project.image} 
+                      alt={project.title}
+                      // These classes make the image fill the container correctly
+                      className="absolute w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+
+                    {/* This div is the hover overlay, it sits on top of the image */}
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
                       <div className="flex space-x-4">
-                        <Button 
-                          size="sm" 
-                          className="btn-hero"
-                          onClick={() => window.open(project.liveUrl, '_blank')}
-                        >
-                          <ExternalLink className="w-4 h-4 mr-2" />
-                          Live
-                        </Button>
-                        <Button 
-                          size="sm" 
-                          variant="outline"
-                          onClick={() => window.open(project.githubUrl, '_blank')}
-                        >
-                          <Github className="w-4 h-4 mr-2" />
-                          Code
-                        </Button>
+                        {/* Buttons are still here but commented out */}
                       </div>
                     </div>
                   </div>
+                  {/* --- END OF MODIFIED SECTION --- */}
                 </CardHeader>
 
                 <CardContent className="p-6">
@@ -166,21 +129,7 @@ const Projects = () => {
 
                 <CardFooter className="p-6 pt-0">
                   <div className="flex space-x-3 w-full">
-                    {/* <Button 
-                      className="flex-1 btn-hero"
-                      onClick={() => window.open(project.liveUrl, '_blank')}
-                    >
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      Live Demo
-                    </Button> */}
-                    {/* <Button 
-                      variant="outline"
-                      className="flex-1"
-                      onClick={() => window.open(project.githubUrl, '_blank')}
-                    >
-                      <Github className="w-4 h-4 mr-2" />
-                      GitHub
-                    </Button> */}
+                    {/* Footer buttons are still here but commented out */}
                   </div>
                 </CardFooter>
               </Card>
