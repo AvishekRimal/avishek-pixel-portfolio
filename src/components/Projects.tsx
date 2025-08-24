@@ -45,6 +45,16 @@ const Projects = () => {
       features: ["Real-time Stock Updates", "Order Management", "Supplier Tracking"],
       category: "Frontend",
     },
+    {
+      title: "Intelligent Student Planner",
+      description: "A full-stack planner to help students organize tasks, schedules, and notes, complete with an interactive calendar and a productivity dashboard.",
+      image: "/studentplanner.png",
+      // liveUrl: 'YOUR_DEPLOYED_URL_HERE',
+      // githubUrl: 'https://github.com/avishekrimal/student-planner',
+      techStack: ["Next.js", "React", "TypeScript", "Redux Toolkit", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "Shadcn/UI", "Recharts"],
+      features: ["Secure User Authentication", "Advanced Task Management", "Interactive Calendar", "Productivity Dashboard", "Automated Email Reminders", "Rich Text Notes"],
+      category: "Full Stack",
+    },
   ];
 
   const categoryIcons = {
