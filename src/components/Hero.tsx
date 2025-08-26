@@ -5,8 +5,8 @@ import profilePhoto from '@/assets/IMG-e6207925ce66c978c009ffb5391966a3-V.jpg';
 const Hero = () => {
   const downloadCV = () => {
     const link = document.createElement('a');
-    link.href = '/AvishekRimal_CV.pdf';
-    link.download = 'AvishekRimal_CV.pdf';
+    link.href = '/AvishekRimalCV.pdf';
+    link.download = 'AvishekRimalCV.pdf';
     link.click();
   };
 

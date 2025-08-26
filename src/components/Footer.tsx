@@ -136,7 +136,7 @@ const Footer = () => {
 
           <div className="text-muted-foreground text-sm">
             <a 
-              href="/AvishekRimal_CV.pdf" 
+              href="/AvishekRimalCV.pdf" 
               download
               className="hover:text-primary transition-colors duration-300"
             >
