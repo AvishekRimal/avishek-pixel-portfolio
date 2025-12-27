@@ -25,16 +25,16 @@ const Projects = () => {
       features: ["Dashboard Analytics", "User Management", "Inventory Tracking"],
       category: "Frontend",
     },
-    {
-      title: "Portfolio Website Builder",
-      description: "A no-code solution for creating beautiful portfolio websites with customizable templates and themes.",
-      image: "/image.png", // Assuming 'image.png' is in your /public folder
-      // liveUrl: 'https://portfolio-builder-demo.vercel.app',
-      // githubUrl: 'https://github.com/avishekrimal/portfolio-builder',
-      techStack: ["Next.js", "Tailwind CSS"],
-      features: ["Drag & Drop Builder", "Custom Templates", "Export Options"],
-      category: "Frontend",
-    },
+    // {
+    //   title: "Portfolio Website Builder",
+    //   description: "A no-code solution for creating beautiful portfolio websites with customizable templates and themes.",
+    //   image: "/image.png", // Assuming 'image.png' is in your /public folder
+    //   // liveUrl: 'https://portfolio-builder-demo.vercel.app',
+    //   // githubUrl: 'https://github.com/avishekrimal/portfolio-builder',
+    //   techStack: ["Next.js", "Tailwind CSS"],
+    //   features: ["Drag & Drop Builder", "Custom Templates", "Export Options"],
+    //   category: "Frontend",
+    // },
     {
       title: "Inventory Management System",
       description: "A robust inventory management application for tracking stock levels, orders, and suppliers with real-time updates.",
@@ -45,6 +45,16 @@ const Projects = () => {
       features: ["Real-time Stock Updates", "Order Management", "Supplier Tracking"],
       category: "Frontend",
     },
+    {
+  title: "Hotel Management System",
+  description: "A comprehensive hotel management system featuring room browsing, real-time availability checks, and an integrated reservation engine for seamless guest experiences.",
+  image: "/hotel.png", 
+  // liveUrl: 'https://luxestay-demo.vercel.app',
+  // githubUrl: 'https://github.com/yourusername/hotel-management',
+  techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma", "PostgreSQL"],
+  features: ["Dynamic Room Filtering", "Real-time Booking Calendar", "Admin Dashboard for Reservations"],
+  category: "Full Stack",
+},
     {
       title: "Intelligent Student Planner",
       description: "A full-stack planner to help students organize tasks, schedules, and notes, complete with an interactive calendar and a productivity dashboard.",

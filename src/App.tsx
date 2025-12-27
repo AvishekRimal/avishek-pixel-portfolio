@@ -5,12 +5,23 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import Snowfall from "react-snowfall";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
+       <Snowfall
+        snowflakeCount={120}
+        style={{
+          position: "fixed",
+          width: "100vw",
+          height: "100vh",
+          pointerEvents: "none", // important
+          zIndex: 0,
+        }}
+      />
       <Toaster />
       <Sonner />
       <BrowserRouter>

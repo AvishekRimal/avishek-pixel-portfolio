@@ -9,7 +9,7 @@ const Education = () => {
       institution: 'Nepal Commerce Campus',
       location: 'Minbhawan, Kathmandu, Nepal',
       years: '2021 - Present',
-      status: '7th Semester Running',
+      status: '8th Semester Running',
       description: 'Pursuing a comprehensive degree with a focus on business and management principles, while integrating my passion for technology and its application in the commercial sector.',
       achievements: [
         'Consistently maintaining a strong academic record.',
