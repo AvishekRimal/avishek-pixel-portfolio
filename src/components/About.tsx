@@ -17,23 +17,23 @@ const floatingSkills = [
 const strengths = [
   {
     icon: Palette,
-    title: "Creativity",
-    description: "Bringing innovative and visually appealing designs to life with attention to detail.",
+    title: "Creative Design",
+    description: "Bringing innovative and visually appealing designs to life with attention to detail and modern UI trends.",
   },
   {
     icon: Code,
-    title: "Responsiveness",
-    description: "Building adaptive interfaces that work seamlessly across all devices and screen sizes.",
+    title: "Responsive Web",
+    description: "Building adaptive interfaces that work seamlessly across all devices, ensuring a perfect mobile-first experience.",
   },
   {
     icon: Zap,
-    title: "Speed",
-    description: "Delivering high-performance applications with optimized code and fast loading times.",
+    title: "SEO & Speed",
+    description: "Delivering high-performance applications with optimized code, fast loading times, and SEO best practices.",
   },
   {
     icon: MessageCircle,
-    title: "Communication",
-    description: "Clear and effective collaboration with teams and stakeholders throughout development.",
+    title: "Collaboration",
+    description: "Clear and effective communication with teams and stakeholders to ensure project goals are met efficiently.",
   },
 ];
 
@@ -58,6 +58,7 @@ const About = () => {
       ref={ref}
       id="about"
       className="section-padding bg-secondary/20 relative overflow-hidden"
+      aria-label="About Avishek Rimal"
     >
       <div className="container-custom relative z-10">
 
@@ -69,7 +70,7 @@ const About = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">
-            About <span className="text-gradient">Me</span>
+            About <span className="text-gradient">Avishek Rimal</span>
           </h2>
           <div className="w-20 h-1.5 bg-gradient-to-r from-primary to-primary-glow mx-auto rounded-full" />
         </motion.div>
@@ -84,17 +85,20 @@ const About = () => {
             className="space-y-6"
           >
             <h3 className="text-2xl md:text-4xl font-semibold">
-              Passionate Frontend Developer
+              Professional Frontend Developer
             </h3>
 
-            <p className="text-muted-foreground">
-              I'm <strong>Avishek Rimal</strong>, focused on crafting modern,
-              high-performance web experiences with clean UI and smooth UX.
+            <p className="text-muted-foreground leading-relaxed">
+              I'm <strong>Avishek Rimal</strong> (also known as <strong>Abhishek Rimal</strong>), 
+              a dedicated Frontend Developer focused on crafting modern,
+              high-performance web experiences. My goal is to combine clean UI with smooth UX 
+              to build products that stand out.
             </p>
 
-            <p className="text-muted-foreground">
-              Specialized in <span className="text-primary">React & Next.js</span>{" "}
-              with a strong focus on performance and scalability.
+            <p className="text-muted-foreground leading-relaxed">
+              Based on my expertise in <span className="text-primary font-medium">React, Next.js, and TypeScript</span>, 
+              I specialize in creating scalable web applications that are both visually stunning 
+              and technically optimized for search engines and performance.
             </p>
           </motion.div>
 
@@ -123,8 +127,9 @@ const About = () => {
               <div className="w-full h-full rounded-full overflow-hidden">
                 <img
                   src={profilePhoto}
-                  alt="profile"
+                  alt="Avishek Rimal - Abhishek Rimal Frontend Developer Portfolio"
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
               </div>
             </motion.div>
@@ -155,7 +160,7 @@ const About = () => {
           </motion.div>
         </div>
 
-        {/* CARDS */}
+        {/* STRENGTH CARDS */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {strengths.map((s, i) => (
             <motion.div
