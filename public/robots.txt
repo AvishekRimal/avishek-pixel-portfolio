@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.avishekrimal.com.np/
+Sitemap: https://www.avishekrimal.com.np/sitemap.xml
