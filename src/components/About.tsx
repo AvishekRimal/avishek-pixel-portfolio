@@ -1,90 +1,184 @@
-import { Code, Zap, MessageCircle, Palette } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
+"use client";
+
+import React, { useRef } from "react";
+import { Code, Zap, MessageCircle, Palette, Sparkles, Layers } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import profilePhoto from "@/assets/IMG-e6207925ce66c978c009ffb5391966a3-V.jpg";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+
+const floatingSkills = [
+  { icon: Palette, label: "Creativity" },
+  { icon: Code, label: "React" },
+  { icon: Zap, label: "Performance" },
+  { icon: Layers, label: "Next.js" },
+  { icon: Sparkles, label: "UI/UX" },
+];
+
+const strengths = [
+  {
+    icon: Palette,
+    title: "Creativity",
+    description: "Bringing innovative and visually appealing designs to life with attention to detail.",
+  },
+  {
+    icon: Code,
+    title: "Responsiveness",
+    description: "Building adaptive interfaces that work seamlessly across all devices and screen sizes.",
+  },
+  {
+    icon: Zap,
+    title: "Speed",
+    description: "Delivering high-performance applications with optimized code and fast loading times.",
+  },
+  {
+    icon: MessageCircle,
+    title: "Communication",
+    description: "Clear and effective collaboration with teams and stakeholders throughout development.",
+  },
+];
 
 const About = () => {
-  const strengths = [
-    {
-      icon: Palette,
-      title: 'Creativity',
-      description: 'Bringing innovative and visually appealing designs to life with attention to detail.'
-    },
-    {
-      icon: Code,
-      title: 'Responsiveness',
-      description: 'Building adaptive interfaces that work seamlessly across all devices and screen sizes.'
-    },
-    {
-      icon: Zap,
-      title: 'Speed',
-      description: 'Delivering high-performance applications with optimized code and fast loading times.'
-    },
-    {
-      icon: MessageCircle,
-      title: 'Communication',
-      description: 'Clear and effective collaboration with teams and stakeholders throughout the development process.'
-    }
-  ];
+  const ref = useRef(null);
+
+  // Scroll animation
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+
+  const rotateX = useTransform(scrollYProgress, [0, 1], [10, -10]);
+  const rotateY = useTransform(scrollYProgress, [0, 1], [-10, 10]);
+  const scale = useTransform(scrollYProgress, [0, 1], [0.9, 1]);
+
+  const smoothRotateX = useSpring(rotateX, { stiffness: 100, damping: 20 });
+  const smoothRotateY = useSpring(rotateY, { stiffness: 100, damping: 20 });
 
   return (
-    <section id="about" className="section-padding bg-secondary/30">
-      <div className="container-custom">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6">
+    <section
+      ref={ref}
+      id="about"
+      className="section-padding bg-secondary/20 relative overflow-hidden"
+    >
+      <div className="container-custom relative z-10">
+
+        {/* Title */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">
             About <span className="text-gradient">Me</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary-glow mx-auto mb-8"></div>
+          <div className="w-20 h-1.5 bg-gradient-to-r from-primary to-primary-glow mx-auto rounded-full" />
+        </motion.div>
+
+        <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+
+          {/* LEFT */}
+          <motion.div
+            initial={{ opacity: 0, x: -80 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7 }}
+            className="space-y-6"
+          >
+            <h3 className="text-2xl md:text-4xl font-semibold">
+              Passionate Frontend Developer
+            </h3>
+
+            <p className="text-muted-foreground">
+              I'm <strong>Avishek Rimal</strong>, focused on crafting modern,
+              high-performance web experiences with clean UI and smooth UX.
+            </p>
+
+            <p className="text-muted-foreground">
+              Specialized in <span className="text-primary">React & Next.js</span>{" "}
+              with a strong focus on performance and scalability.
+            </p>
+          </motion.div>
+
+          {/* RIGHT - 3D PROFILE */}
+          <motion.div
+            style={{
+              rotateX: smoothRotateX,
+              rotateY: smoothRotateY,
+              scale,
+              transformPerspective: 1200,
+            }}
+            className="relative flex justify-center items-center h-[400px]"
+          >
+            {/* Glow */}
+            <div className="absolute w-72 h-72 bg-primary/30 blur-[120px] rounded-full animate-pulse" />
+
+            {/* Rings */}
+            <div className="absolute w-64 h-64 border border-primary/20 rounded-full animate-spin-slow" />
+            <div className="absolute w-80 h-80 border border-primary/10 rounded-full animate-spin-reverse" />
+
+            {/* Image */}
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              className="relative z-10 w-56 h-56 rounded-full p-[3px] bg-gradient-to-tr from-primary to-primary-glow shadow-xl"
+            >
+              <div className="w-full h-full rounded-full overflow-hidden">
+                <img
+                  src={profilePhoto}
+                  alt="profile"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </motion.div>
+
+            {/* Floating Skills */}
+            {floatingSkills.map((skill, index) => {
+              const angle = (index / floatingSkills.length) * 360;
+              const radius = 140;
+
+              return (
+                <motion.div
+                  key={skill.label}
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: index * 0.2 }}
+                  className="absolute hidden md:block"
+                  style={{
+                    transform: `rotate(${angle}deg) translate(${radius}px) rotate(-${angle}deg)`,
+                  }}
+                >
+                  <div className="flex items-center gap-2 bg-background/80 backdrop-blur-md px-3 py-1.5 rounded-full border border-border hover:border-primary transition">
+                    <skill.icon className="h-3.5 w-3.5 text-primary" />
+                    <span className="text-xs font-semibold">{skill.label}</span>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </motion.div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Text Content */}
-          <div className="space-y-6 animate-fade-in">
-            <div className="space-y-4">
-              <h3 className="text-2xl md:text-3xl font-display font-semibold">
-                Passionate Frontend Developer
-              </h3>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                I'm Avishek Rimal, a dedicated frontend developer with a passion for creating 
-                exceptional user experiences. My journey in web development started with curiosity 
-                about how websites work, and it has evolved into a deep love for crafting interactive, 
-                accessible, and performant web applications.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                I specialize in modern JavaScript frameworks like React and Next.js, combined with 
-                the utility-first approach of Tailwind CSS. My goal is to bridge the gap between 
-                design and development, ensuring that every pixel serves a purpose and every 
-                interaction feels natural.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                When I'm not coding, you'll find me exploring new technologies, contributing to 
-                open-source projects, or mentoring aspiring developers. I believe in continuous 
-                learning and staying updated with the ever-evolving landscape of web development.
-              </p>
-            </div>
-          </div>
-
-          {/* Strengths Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {strengths.map((strength, index) => (
-              <Card 
-                key={strength.title} 
-                className="card-glass card-hover animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <CardContent className="p-6 text-center">
-                  <div className="mb-4">
-                    <div className="w-16 h-16 mx-auto rounded-full bg-primary/10 flex items-center justify-center">
-                      <strength.icon className="h-8 w-8 text-primary" />
-                    </div>
+        {/* CARDS */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {strengths.map((s, i) => (
+            <motion.div
+              key={s.title}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.2 }}
+            >
+              <Card className="card-glass group hover:-translate-y-2 transition">
+                <CardContent className="p-8 text-center">
+                  <div className="mb-6 w-16 h-16 mx-auto rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary transition">
+                    <s.icon className="h-8 w-8 text-primary group-hover:text-white" />
                   </div>
-                  <h4 className="text-xl font-semibold mb-3">{strength.title}</h4>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {strength.description}
+                  <h4 className="text-xl font-bold">{s.title}</h4>
+                  <p className="text-sm text-muted-foreground mt-2">
+                    {s.description}
                   </p>
                 </CardContent>
               </Card>
-            ))}
-          </div>
+            </motion.div>
+          ))}
         </div>
+
       </div>
     </section>
   );
