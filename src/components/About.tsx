@@ -89,7 +89,7 @@ const About = () => {
             </h3>
 
             <p className="text-muted-foreground leading-relaxed">
-              I'm <strong>Avishek Rimal</strong> (also known as <strong>Abhishek Rimal</strong>), 
+              I'm <strong>Avishek Rimal</strong> , 
               a dedicated Frontend Developer focused on crafting modern,
               high-performance web experiences. My goal is to combine clean UI with smooth UX 
               to build products that stand out.

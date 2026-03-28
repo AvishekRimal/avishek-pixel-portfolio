@@ -27,7 +27,7 @@ const Hero = () => {
                 Frontend Developer & UI/UX Specialist
               </h2>
               <p className="text-lg md:text-xl text-muted-foreground max-w-2xl">
-                I am Avishek Rimal (often searched as Abhishek Rimal). I turn ideas into interactive, pixel-perfect web experiences with modern technologies.
+               I am Avishek Rimal, a Frontend Developer based in Kathmandu, Nepal. I specialize in crafting visually stunning and highly functional web applications. With a passion for design and a keen eye for detail, I create seamless user experiences that captivate and engage. My expertise lies in HTML, CSS, JavaScript, React, and Next.js, allowing me to bring innovative ideas to life. Whether it's building responsive interfaces or optimizing performance, I am dedicated to delivering exceptional results that exceed expectations.  
               </p>
             </div>
 
